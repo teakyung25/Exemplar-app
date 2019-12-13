@@ -1,0 +1,33 @@
+
+
+	<h1>Mentors</h1>
+        <nav id="">
+          <button class="destyle_btn style_btn selected" id="userMentorBTN">Your Mentors</button>
+          <button class="destyle_btn style_btn" id="findMentorBTN">Find Mentors</button>
+        </nav>
+        <div id="userMentor_container">
+          <p class="subheader header">Your Mentors</p>
+          <div id="userMentors"></div>
+          <p class="subheader header">Pending Mentors</p>
+          <div id="userPendingMentors"></div>
+        </div>
+        <div id="newMentor_container">
+          <div id="autoMatch_container">
+            <div class="header" id="autoMatch_header">
+              <p class="subheader">Auto Match</p>
+              <p>Auto Match finds mentors with interests you have.</p>
+            </div>
+            <button class="destyle_btn style_btn" id="auto_match">Match</button>
+            <div id="autoMatch_results"></div>
+          </div>
+          <div id="searchMentors_container">
+            <div class="header">
+              <p class="subheader">Add Mentor</p>
+            </div>
+            <form action="" id="search">
+                <input type="text" name="recipient" id="searchBar" placeholder="Add Mentor" list="recipients">
+                <div id="recipients_container"></div>
+              <button type="button" id="mentor_search" class="destyle_btn"><i class="material-icons">add</i></button>
+            </form>
+          </div>
+        </div>

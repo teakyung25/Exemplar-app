@@ -1,0 +1,104 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <script src="../jquery.js"></script>
+        <!-- <script src="https://fb.me/react-0.14.3.js"></script>
+        <script src="https://fb.me/react-dom-0.14.3.js"></script> -->
+        <script crossorigin src="../react.min.js"></script>
+        <script crossorigin src="../react-dom.min.js"></script>
+        <script>window.user = <%- JSON.stringify(user || null) %></script>
+        <script src="../babel.min.js"></script>
+        <script src="match.js"></script>
+        <script type="text/babel" src="index.js"></script>
+        <title>Home</title>
+    </head>
+    <body>
+      <div class="modals">
+          <div id="confirm" class="modal">
+              <span id="confirm-message"><h3>Create Event</h3></span>
+              <div id="confirm-buttons">
+                <form id="event_form">
+                    <input type="text" name="title" id="title" placeholder="Event Title">
+                    <input type="date" name="date" id="date">
+                    <input type="time" name="time" id="time">
+                </form>
+                <button class="btnStyle destyle_btn" id="cancelBtn">Cancel</button>
+                <button type="submit" form="event_form" value="Submit" class="btnStyle destyle_btn" id="confirmBtn">Add</button>
+              </div>
+            </div>
+      </div>
+      <header>
+        <div class="user_info">
+          <div class="profile">
+            <span id="profile_overlay">edit</span>
+            <img id="profile" src="profile.png" alt="profile" width="60px" height="60px">
+          </div>
+          
+          <h3><%= user.username %></h3>
+        </div>
+        <nav id="main_nav">
+          <a href="#dashboard_sec" >Dashboard <i class="material-icons">rss_feed</i></a>
+          <a href="#interests_sec">My Interests <i class="material-icons">favorite_border</i></a>
+          <a href="#mentors_sec" ><div style='display: inline;' id='mentors_tab'></div> <i class="material-icons">face</i></a>
+          <a href="/logout">Sign Out <i class="material-icons">exit_to_app</i></a>
+        </nav>
+        <!-- <button id="nav_toggle">
+          <i class="material-icons" id="collapse">first_page</i>
+          <i class="material-icons" id="open">last_page</i>
+        </button> -->
+      </header>
+      <div class="section" id="dashboard_sec">
+        <h1>Dashboard</h1>
+        <div class="dash_container">
+            <div class="message_container">
+              <div class="messages">
+                  <p class="subheader header">Messages</p>
+                  <div id="dash_messages"></div>
+              </div>
+              <div class="messageGen">
+                  <form action="" id="message_form">
+                    <input type="text" name="recipient" id="recipient" placeholder="recipient" list="recipients">
+                    <input type="text" name="subject" id="subject" placeholder="subject">
+                    <div id="recipients_container"></div>
+                    <textarea name="newMessage" id="newMessage" rows="10" cols="30" placeholder="Message" required></textarea>
+                    <input type="submit" id="submitMessage">
+                  </form>
+              </div>
+              <h6 class='TOS'>By using this app you agree to the <a href='https://docs.google.com/document/d/1Gze2LjfA753m1QJ6DThQ-HYVGTiFStxV5pEsY2WDp9I/edit?usp=sharing'>Terms of Service</a></h6>
+
+            </div>
+            <div class="events">
+              <div class="header">
+                <p class="subheader">Events</p>
+                <span class="grow"></span>
+                <button class="destyle_btn" id="add_event"><i class="material-icons" id="add_btn">add_box</i></button>
+              </div>
+              <div id="events">
+                <!-- <div class="eventContainer">
+                  <div id="date">10/10/19</div>
+                  <div id="todo">Meet with mentor.</div>
+                </div> -->
+              </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="section" id="interests_sec">
+        <h1>Interests</h1>
+        <div class="interestContainer">
+          <p class="subheader">Interests<button class="destyle_btn" id="add_fields"><p>Add Interests</p><i class="material-icons" id="add">add_box</i></button></p>
+          <div id="nodeFields">
+
+          </div>
+          <p class="subheader">Your Interests<button class="destyle_btn" id="remove_fields"><p>Remove Interests</p><i class="material-icons" id="add_btn">delete_outline</i></button></p>
+          <div id="interests">
+
+          </div>
+        </div>
+      </div>
+      <div class="section" id="mentors_sec">
+      </div>
+    </body>
+</html>
