@@ -25,6 +25,7 @@
 2. Download PostgreSQL on your Computer
 3. Download Node.js on your Computer 
 4. Open pgAdmin select the query tool on the top right of the left navigation. Put in the following lines:
+```
 CREATE TABLE public.nodes
 (
     node_name text COLLATE pg_catalog."default" NOT NULL,
@@ -51,6 +52,7 @@ CREATE TABLE public.users
     pending_users text[] COLLATE pg_catalog."default",
     CONSTRAINT users_pkey PRIMARY KEY (username)
 )
+```
 5. Click the lightning button and find your new tables under Databases => postgres => Schemas => Public => Tables
 6. Do the following for both tables:
   - Download the corresponding csv file 
