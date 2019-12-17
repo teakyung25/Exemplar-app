@@ -14,7 +14,7 @@
 - React.js
 - Babel.js
 
-### In this project I learned how to effectively create a node webserver using express and connecting the webserver to a database. This allows the application to complete more complex tasks it needs to accomplish on the frontend and the backend. I have also experimented with a front end library called react to make a more fluent and dynamic user experience. To summerize, the idea of backend development something I wanted to understand and learn about, but it was alway hard to find a place to start, I was able to find a bit more sense of direct with this project. 
+### In this project I learned how to effectively create a node webserver using express and connecting the webserver to a database. This allows the application to complete more complex tasks it needs to accomplish on the frontend and the backend. I have also experimented with a front end library called react to make a more fluent and dynamic user experience. To summerize, the idea of backend development was something I wanted to understand and learn about, but it was alway hard to find a place to start, I was able to find a bit more sense of direct with this project. 
 
 # Future 
 
