@@ -23,6 +23,8 @@
 # How to Use
 1. Download the Application through the github
 2. Download PostgreSQL on your Computer
+    1. Create a new Database under port 5432 name it postgres
+    2. Password should be s_dev_2019
 3. Download Node.js on your Computer 
 4. Open pgAdmin select the query tool on the top right of the left navigation. Put in the following lines:
 ```
