@@ -24,4 +24,41 @@
 1. Download the Application through the github
 2. Download PostgreSQL on your Computer
 3. Download Node.js on your Computer 
-4. Open pgAdmin and 
+4. Open pgAdmin select the query tool on the top right of the left navigation. Put in the following lines:
+CREATE TABLE public.nodes
+(
+    node_name text COLLATE pg_catalog."default" NOT NULL,
+    join_code text COLLATE pg_catalog."default" NOT NULL,
+    zip_code integer NOT NULL,
+    admin_password text COLLATE pg_catalog."default" NOT NULL,
+    fields text[] COLLATE pg_catalog."default",
+    CONSTRAINT nodes_pkey PRIMARY KEY (node_name)
+)
+CREATE TABLE public.users
+(
+    firstname text COLLATE pg_catalog."default" NOT NULL,
+    lastname text COLLATE pg_catalog."default" NOT NULL,
+    username text COLLATE pg_catalog."default" NOT NULL,
+    email text COLLATE pg_catalog."default" NOT NULL,
+    password text COLLATE pg_catalog."default" NOT NULL,
+    role boolean NOT NULL,
+    fields text[] COLLATE pg_catalog."default" NOT NULL,
+    description text COLLATE pg_catalog."default" NOT NULL,
+    asso_node text COLLATE pg_catalog."default",
+    messages text[] COLLATE pg_catalog."default",
+    events text[] COLLATE pg_catalog."default",
+    asso_users text[] COLLATE pg_catalog."default",
+    pending_users text[] COLLATE pg_catalog."default",
+    CONSTRAINT users_pkey PRIMARY KEY (username)
+)
+5. Click the lightning button and find your new tables under Databases => postgres => Schemas => Public => Tables
+6. Do the following for both tables:
+  - Download the corresponding csv file 
+  - Right click on the table and click Import/Export
+    - Toggle to Import
+    - Select File
+    - Configure Under Miscellaneous
+      - Header to yes
+      - Delimiter to comma
+    - Click OK
+    
