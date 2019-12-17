@@ -66,3 +66,7 @@ CREATE TABLE public.users
       - Delimiter to comma
     - Click OK
     
+7. Run your node application
+```
+nodemon app.js
+```
