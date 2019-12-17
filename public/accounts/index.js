@@ -15,9 +15,11 @@ $(async function(){
         return data
     }
     let nodes = await fetchData('/nodes', {'giveme' : ''})
-    nodes.forEach(e => {
-        $("#nodeSelected").append(`<option value="${e.node_name}" >${e.node_name}</option>`)
-    });
+    if(nodes.length != 0){
+        nodes.forEach(e => {
+            $("#nodeSelected").append(`<option value="${e.node_name}" >${e.node_name}</option>`)
+        });
+    }
     $("#login").on('submit', async function(e){
         e.preventDefault();
         let details = $('#form_login').serializeArray();
@@ -72,9 +74,10 @@ $(async function(){
                 let verifiedPass = details[6]
                 let isMentor = details[8].value == 'mentor' ? true : false
                 let fieldList = []
-                details.slice(9,(details.length-2)).forEach( e => {
+                details.slice(9,(details.length-1)).forEach( e => {
                     fieldList.push(e.value)
                 })
+                console.log(fieldList)
                 console.log(details.slice(9,(details.length-1)))
                 var userinfo = [details[2],details[3],details[4],details[5], verifiedPass, {name:'isMentor', value:isMentor},{name:'fieldList', value:fieldList.toString()},details[details.length-1],details[0]]
                 const optionsUsername = {

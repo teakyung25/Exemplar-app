@@ -5,6 +5,8 @@ const bcrypt = require('bcryptjs');
 //Connection to Database Server
 const pgp = require('pg-promise')(/* options */)
 const db = pgp('postgres://postgres:s_dev_2019@localhost:5432/postgres')
+// const db = pgp('postgres://postgres:master_dev_2019@exemplar-db.cfby3ogrbxbu.us-east-2.rds.amazonaws.com:5432/postgres')
+
 
 //Public files run
 app.use(express.static('public'))
