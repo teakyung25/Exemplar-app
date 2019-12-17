@@ -20,3 +20,8 @@
 
 ### I will tried to deploy my application to the cloud, but limited budget has prevent a immediate migration, but is something to be implemented in the near future. 
 
+# How to Use
+1. Download the Application through the github
+2. Download PostgreSQL on your Computer
+3. Download Node.js on your Computer 
+4. Open pgAdmin and 
