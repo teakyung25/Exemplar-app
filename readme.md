@@ -18,5 +18,5 @@
 
 # Future 
 
-### I have tried to deploy my application to the cloud, but limited budget has prevent a immediate migration, but is something to be implemented in the near future. 
+### I will tried to deploy my application to the cloud, but limited budget has prevent a immediate migration, but is something to be implemented in the near future. 
 
